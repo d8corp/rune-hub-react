@@ -200,25 +200,20 @@ Returns the current Hub instance from context.
 
 ```tsx
 import { useHub } from '@rune-hub/react'
-import { myCommand } from './commands'
 
 function MyComponent () {
   const hub = useHub()
 
-  const handleClick = () => {
-    hub.use(myCommand)
-  }
+  console.log(hub)
 
-  return <button onClick={handleClick}>Execute Command</button>
+  return <h1>Hello World!</h1>
 }
 ```
 
 ### useAction
 ###### [🏠︎](#index) / [API](#api) / useAction [↑](#usehub) [↓](#userune)
 
-**Wraps an action function to execute within the current Hub context.**
-
-The hook automatically binds your action to the Hub, ensuring all state changes are tracked in custom hub.
+The hook automatically binds your action to context Hub.
 
 ```tsx
 import { set, get } from 'rune-hub'
@@ -243,14 +238,11 @@ function Counter () {
 }
 ```
 
-The returned function is memoized and stable across re-renders, making it safe to use in dependency arrays.
-
 ### useRune
 ###### [🏠︎](#index) / [API](#api) / useRune [↑](#useaction) [↓](#useslot)
 
-**Subscribe to a Rune and trigger re-renders when its value changes.**
-
-Uses `useSyncExternalStore` for proper synchronization with React's rendering cycle. Automatically subscribes to the Rune's slot and unsubscribes on unmount.
+Uses `useSyncExternalStore` for proper synchronization with React's rendering cycle.
+Automatically subscribes to the Rune's slot and unsubscribes on unmount.
 
 ```tsx
 import { rune } from 'rune-hub'
