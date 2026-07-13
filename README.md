@@ -48,7 +48,7 @@ Written in TypeScript and provides full type definitions out of the box.
 ## Index
 
 <sup>**[ [Install](#install) ]**</sup>  
-<sup>**[ [Examples](#examples) ]** [Basic Counter](#basic-counter) • [Todo List with Undo/Redo](#todo-list-with-undoredo)</sup>  
+<sup>**[ [Examples](#examples) ]** [Basic Counter](#basic-counter) • [Todo List](#todo-list)</sup>  
 <sup>**[ [API](#api) ]** [HubProvider](#hubprovider) • [useHub](#usehub) • [useAction](#useaction) • [useRune](#userune) • [useSlot](#useslot)</sup>  
 <sup>**[ [Links](#links) ]**</sup>
 
@@ -66,12 +66,12 @@ npm i rune-hub @rune-hub/react
 ## Examples
 ###### [🏠︎](#index) / Examples [↑](#install) [↓](#api)
 
-<sup>[Basic Counter](#basic-counter) • [Todo List with Undo/Redo](#todo-list-with-undoredo)</sup>
+<sup>[Basic Counter](#basic-counter) • [Todo List](#todo-list)</sup>
 
 ### Basic Counter
-###### [🏠︎](#index) / [Examples](#examples) / Basic Counter [↓](#todo-list-with-undoredo)
+###### [🏠︎](#index) / [Examples](#examples) / Basic Counter [↓](#todo-list)
 
-A simple counter demonstrating `useRune` and `useAction` working together.
+A simple counter demonstrating.
 
 ```tsx
 import { set, get } from 'rune-hub'
@@ -94,10 +94,10 @@ function Counter () {
 }
 ```
 
-### Todo List with Undo/Redo
-###### [🏠︎](#index) / [Examples](#examples) / Todo List with Undo/Redo [↑](#basic-counter)
+### Todo List
+###### [🏠︎](#index) / [Examples](#examples) / Todo List [↑](#basic-counter)
 
-A todo list showcasing rune-hub's command pattern with undo/redo capabilities.
+A todo list showcasing rune-hub features.
 
 ```tsx
 import { useState } from 'react'
