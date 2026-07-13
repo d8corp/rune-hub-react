@@ -4,8 +4,6 @@
 @rune-hub/react
 </h1>
 
-<p align="center"><b>RuneHub with React</b></p>
-
 <div align="center">
   <a href="https://www.npmjs.com/package/@rune-hub/react" target="_blank">
     <img src="https://img.shields.io/npm/v/@rune-hub/react.svg" alt="rune-hub npm">
