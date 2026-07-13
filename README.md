@@ -36,7 +36,6 @@
 <br>
 
 **Library for integrating [rune-hub](https://www.npmjs.com/package/rune-hub) with [React](https://www.npmjs.com/package/react).**
-Provides utils for working with state management system.
 
 Written in TypeScript and provides full type definitions out of the box.
 
