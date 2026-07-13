@@ -198,9 +198,7 @@ If you don't provide a Hub, the default `Hub.root` will be used.
 ### useHub
 ###### [🏠︎](#index) / [API](#api) / useHub [↑](#hubprovider) [↓](#useaction)
 
-**Returns the current Hub instance from context.**
-
-Use this hook to access the Hub and execute commands manually.
+Returns the current Hub instance from context.
 
 ```tsx
 import { useHub } from '@rune-hub/react'
