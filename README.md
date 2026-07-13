@@ -96,33 +96,39 @@ function Counter () {
 
 A todo list showcasing rune-hub features.
 
-```tsx
-import { useState } from 'react'
+Store:
+```ts
 import { get, set, update } from 'rune-hub'
-import { useRune } from '@rune-hub/react'
 
-interface Todo {
+export interface Todo {
   id: number
   text: string
   done: boolean
 }
 
-const $todos = (): Todo[] => []
 let nextId = 1
+export const todos = (): Todo[] => []
 
-const addTodo = (text: string) => {
-  get($todos).push({ id: nextId++, text, done: false })
-  update($todos)
+export const addTodo = (text: string) => {
+  get(todos).push({ id: nextId++, text, done: false })
+  update(todos)
 }
 
-const toggleTodo = (todoId: number) => {
-  set($todos, get($todos).map(todo =>
+export const toggleTodo = (todoId: number) => {
+  set(todos, get(todos).map(todo =>
     todoId === todo.id ? { ...todo, done: !todo.done } : todo,
   ))
 }
+```
+
+Component:
+```tsx
+import { useState } from 'react'
+import { useRune } from '@rune-hub/react'
+import { todos, addTodo, toggleTodo } from './store.ts'
 
 function TodoList () {
-  const todos = useRune($todos)
+  const todoList = useRune(todos)
   const [text, setText] = useState('')
 
   const handleSubmit = (e: any) => {
@@ -145,7 +151,7 @@ function TodoList () {
         <button type='submit'>Add</button>
       </form>
       <ul>
-        {todos.map(({ id, done, text }) => (
+        {todoList.map(({ id, done, text }) => (
           <li
             key={id}
             onClick={() => toggleTodo(id)}
