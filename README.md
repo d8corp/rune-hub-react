@@ -245,13 +245,18 @@ Uses `useSyncExternalStore` for proper synchronization with React's rendering cy
 Automatically subscribes to the Rune's slot and unsubscribes on unmount.
 
 ```tsx
-import { rune } from 'rune-hub'
+import { rune, get } from 'rune-hub'
 import { useRune } from '@rune-hub/react'
 
 const count = () => 0
+const log = () => console.log(get(count))
 
 function Counter () {
   const value = useRune(count)
+  // Subscribe to count changes
+  
+  useRune(log)
+  // Activate log effect
 
   return <div>Count: {value}</div>
 }
