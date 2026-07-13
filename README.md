@@ -1,19 +1,41 @@
-<a href="https://www.npmjs.com/package/rune-hub">
-  <img src="https://cdn.jsdelivr.net/gh/d8corp/rune-hub@main/logo.svg" align="left" width="90" height="90" alt="RuneHub logo by Mikhail Lysikov">
-</a>
-
-<h1>
-&nbsp; @rune-hub/react<br>
-&nbsp; <sup>RuneHub with React</sup>
+<h1 align="center">
+<img src="https://cdn.jsdelivr.net/gh/d8corp/rune-hub@main/logo.svg" width="80">
+<br>
+@rune-hub/react
 </h1>
 
-[![NPM](https://img.shields.io/npm/v/@rune-hub/react.svg)](https://www.npmjs.com/package/@rune-hub/react)
-[![downloads](https://img.shields.io/npm/dm/@rune-hub/react.svg)](https://www.npmtrends.com/@rune-hub/react)
-[![downloads](https://packagephobia.com/badge?p=@rune-hub/react)](https://github.com/d8corp/rune-hub-react/tree/main/release)
-[![types](https://img.shields.io/npm/types/@rune-hub/react)](https://www.typescriptlang.org)
-[![changelog](https://img.shields.io/badge/Changelog-⋮-brightgreen)](https://changelogs.xyz/@rune-hub/react)
-[![license](https://img.shields.io/npm/l/@rune-hub/react)](https://github.com/d8corp/rune-hub-react/blob/master/LICENSE)
-[![tests](https://github.com/d8corp/rune-hub-react/actions/workflows/tests.yml/badge.svg)](https://d8corp.github.io/rune-hub-react/coverage/lcov-report/)
+<p align="center"><b>RuneHub with React</b></p>
+
+<div align="center">
+  <a href="https://www.npmjs.com/package/@rune-hub/react" target="_blank">
+    <img src="https://img.shields.io/npm/v/@rune-hub/react.svg" alt="rune-hub npm">
+  </a>
+  <a href="https://www.npmtrends.com/@rune-hub/react" target="_blank">
+    <img src="https://img.shields.io/npm/dm/@rune-hub/react.svg" alt="rune-hub downloads">
+  </a>
+  <a href="https://github.com/d8corp/rune-hub-react/tree/main/release" target="_blank">
+    <img src="https://packagephobia.com/badge?p=@rune-hub/react" alt="rune-hub install size">
+  </a>
+  <a href="https://www.typescriptlang.org" target="_blank">
+    <img src="https://img.shields.io/npm/types/@rune-hub/react" alt="TypeScript">
+  </a>
+  <a href="https://github.com/d8corp/rune-hub-react/blob/main/LICENSE" target="_blank">
+    <img src="https://img.shields.io/npm/l/@rune-hub/react" alt="rune-hub license">
+  </a>
+  <a href="https://github.com/d8corp/rune-hub-react/blob/main/CHANGELOG.md" target="_blank">
+    <img src="https://img.shields.io/badge/Changelog-⋮-brightgreen" alt="rune-hub changelog">
+  </a>
+  <a href="https://d8corp.github.io/rune-hub-react/coverage/lcov-report" target="_blank">
+    <img src="https://github.com/d8corp/rune-hub-react/actions/workflows/tests.yml/badge.svg" alt="rune-hub tests">
+  </a>
+  <a href="https://github.com/d8corp/rune-hub-react/issues" target="_blank">
+    <img src="https://img.shields.io/github/issues-raw/d8corp/rune-hub-react" alt="Open issues">
+  </a>
+  <a href="https://github.com/d8corp/rune-hub-react/pulls" target="_blank">
+    <img src="https://img.shields.io/github/issues-pr-raw/d8corp/rune-hub-react" alt="Pull requests">
+  </a>
+</div>
+<br>
 
 **Library for integrating [rune-hub](https://www.npmjs.com/package/rune-hub) with [React](https://www.npmjs.com/package/react).**
 Provides utils for working with state management system.
