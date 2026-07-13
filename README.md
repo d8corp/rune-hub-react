@@ -258,12 +258,12 @@ Uses `useSyncExternalStore` for proper synchronization with React's rendering cy
 import { rune } from 'rune-hub'
 import { useRune } from '@rune-hub/react'
 
-const $count = rune(0)
+const count = () => 0
 
 function Counter () {
-  const count = useRune($count)
+  const value = useRune(count)
 
-  return <div>Count: {count}</div>
+  return <div>Count: {value}</div>
 }
 ```
 
@@ -278,10 +278,10 @@ A Slot is a Hub-scoped reactive container that tracks changes to a Rune. Use thi
 import { useEffect } from 'react'
 import { useSlot } from '@rune-hub/react'
 
-const $count = () => 0
+const count = () => 0
 
 function Counter () {
-  const slot = useSlot($count)
+  const slot = useSlot(count)
 
   useEffect(() => {
     // Access raw value without subscribing
