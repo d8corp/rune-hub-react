@@ -36,7 +36,7 @@
 <br>
 
 `@rune-hub/react` provides [React](https://www.npmjs.com/package/react) integration for the reactive [rune-hub](https://www.npmjs.com/package/rune-hub) store, implementing a flexible subscription mechanism for state changes and mutation calls via specialized hooks.
-The HubProvider component injects the store instance into the React context, while the useRune and useAction hooks ensure reactive data synchronization and stable references to action functions, minimizing unnecessary re-renders.
+The [HubProvider](#hubprovider) component injects the store instance into the React context, while the [useRune](#userune) and [useAction](#useaction) hooks ensure reactive data synchronization and stable references to action functions, minimizing unnecessary re-renders.
 With full TypeScript support and straightforward integration, the library enables predictable state management architecture without boilerplate, while maintaining high performance and compatibility with modern build tools.
 
 [![stars](https://img.shields.io/github/stars/d8corp/rune-hub-react?style=social)](https://github.com/d8corp/rune-hub-react/stargazers)
