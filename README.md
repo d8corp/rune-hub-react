@@ -174,9 +174,7 @@ function TodoList () {
 ### HubProvider
 ###### [🏠︎](#index) / [API](#api) / HubProvider [↓](#usehub)
 
-**Context provider for sharing a Hub instance across React components.**
-
-The `HubProvider` wraps your component tree and makes a Hub instance available to all child components via `useHub` hook.
+The `HubProvider` wraps your component tree and makes a Hub instance available to all child components via [useHub](#usehub) hook.
 
 ```tsx
 import { Hub } from 'rune-hub'
