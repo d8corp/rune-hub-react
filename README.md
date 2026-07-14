@@ -251,12 +251,12 @@ function Counter () {
 The hook automatically binds your action to context Hub.
 
 ```tsx
-import { set, get } from 'rune-hub'
+import { slot } from 'rune-hub'
 import { useRune, useAction } from '@rune-hub/react'
 
 const count = () => 0
-const increment = () => set(count, get(count) + 1)
-const decrement = () => set(count, get(count) - 1)
+const increment = () => slot(count).value++
+const decrement = () => slot(count).value--
 
 function Counter () {
   const value = useRune(count)
