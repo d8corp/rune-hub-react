@@ -1,5 +1,7 @@
 <h1 align="center">
+<a href="https://github.com/d8corp/rune-hub">
 <img src="https://cdn.jsdelivr.net/gh/d8corp/rune-hub@main/logo.svg" width="80">
+</a>
 <br>
 @rune-hub/react
 </h1>
