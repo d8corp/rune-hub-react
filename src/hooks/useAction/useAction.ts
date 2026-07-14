@@ -1,10 +1,9 @@
 import { useCallback } from 'react'
+import type { Fn } from 'rune-hub'
 
 import { useHub } from '../useHub'
 
-export type Action = (...ar: any[]) => any
-
-export function useAction<T extends Action> (action: T): T {
+export function useAction<T extends Fn> (action: T): T {
   const hub = useHub()
 
   return useCallback(((...args) => hub.use(() => action(...args))) as T, [hub, action])
