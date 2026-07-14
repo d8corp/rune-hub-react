@@ -290,7 +290,7 @@ function MyComponent () {
 
 **Returns a Slot instance for a given Rune within the current Hub context.**
 
-A Slot is a Hub-scoped reactive container that tracks changes to a Rune. Use this when you need direct access to the Slot API rather than just the value.
+A Slot is a Hub-scoped reactive container that tracks changes to a Rune. Use this when you need direct access to the [Slot API](https://github.com/d8corp/rune-hub#slot-api) rather than just the value.
 
 ```tsx
 import { useEffect } from 'react'
