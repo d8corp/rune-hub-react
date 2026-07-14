@@ -46,7 +46,7 @@ With full TypeScript support and straightforward integration, the library enable
 
 <sup>**[ [Install](#install) ]**</sup>  
 <sup>**[ [Examples](#examples) ]** [Basic Counter](#basic-counter) • [Todo List](#todo-list)</sup>  
-<sup>**[ [API](#api) ]** [HubProvider](#hubprovider) • [useHub](#usehub) • [useAction](#useaction) • [useRune](#userune) • [useSlot](#useslot)</sup>  
+<sup>**[ [API](#api) ]** [HubProvider](#hubprovider) • [useRune](#userune) • [useOn](#useon) • [useAction](#useaction) • [useHub](#usehub) • [useSlot](#useslot)</sup>  
 <sup>**[ [Links](#links) ]**</sup>
 
 ## Install
@@ -169,10 +169,10 @@ function TodoList () {
 ## API
 ###### [🏠︎](#index) / API [↑](#examples) [↓](#links)
 
-<sup>[HubProvider](#hubprovider) • [useHub](#usehub) • [useAction](#useaction) • [useRune](#userune) • [useSlot](#useslot)</sup>
+<sup>[HubProvider](#hubprovider) • [useRune](#userune) • [useOn](#useon) • [useAction](#useaction) • [useHub](#usehub) • [useSlot](#useslot)</sup>
 
 ### HubProvider
-###### [🏠︎](#index) / [API](#api) / HubProvider [↓](#usehub)
+###### [🏠︎](#index) / [API](#api) / HubProvider [↓](#userune)
 
 The `HubProvider` wraps your component tree and makes a Hub instance available to all child components via [useHub](#usehub) hook.
 
@@ -193,25 +193,53 @@ function App () {
 
 If you don't provide a Hub, the default `Hub.root` will be used.
 
-### useHub
-###### [🏠︎](#index) / [API](#api) / useHub [↑](#hubprovider) [↓](#useaction)
+### useRune
+###### [🏠︎](#index) / [API](#api) / useRune [↑](#hubprovider) [↓](#useon)
 
-Returns the current Hub instance from context.
+Uses `useSyncExternalStore` for proper synchronization with React's rendering cycle.
+Automatically subscribes to the Rune's slot and unsubscribes on unmount.
 
 ```tsx
-import { useHub } from '@rune-hub/react'
+import { rune, get } from 'rune-hub'
+import { useRune } from '@rune-hub/react'
 
-function MyComponent () {
-  const hub = useHub()
+const count = () => 0
+const log = () => console.log(get(count))
 
-  console.log(hub)
+function Counter () {
+  const value = useRune(count)
+  // Subscribe to count changes
+  
+  useRune(log)
+  // Activate log effect
 
-  return <h1>Hello World!</h1>
+  return <div>Count: {value}</div>
+}
+```
+
+### useOn
+###### [🏠︎](#index) / [API](#api) / useOn [↑](#userune) [↓](#useaction)
+
+```tsx
+import { rune, get } from 'rune-hub'
+import { useRune, useOn } from '@rune-hub/react'
+
+const count = () => 0
+const log = () => console.log(get(count))
+
+function Counter () {
+  const value = useRune(count)
+  // Subscribe to count changes
+
+  useOn(log)
+  // Activate log effect
+
+  return <div>Count: {value}</div>
 }
 ```
 
 ### useAction
-###### [🏠︎](#index) / [API](#api) / useAction [↑](#usehub) [↓](#userune)
+###### [🏠︎](#index) / [API](#api) / useAction [↑](#useon) [↓](#usehub)
 
 The hook automatically binds your action to context Hub.
 
@@ -238,32 +266,25 @@ function Counter () {
 }
 ```
 
-### useRune
-###### [🏠︎](#index) / [API](#api) / useRune [↑](#useaction) [↓](#useslot)
+### useHub
+###### [🏠︎](#index) / [API](#api) / useHub [↑](#useaction) [↓](#useslot)
 
-Uses `useSyncExternalStore` for proper synchronization with React's rendering cycle.
-Automatically subscribes to the Rune's slot and unsubscribes on unmount.
+Returns the current Hub instance from context.
 
 ```tsx
-import { rune, get } from 'rune-hub'
-import { useRune } from '@rune-hub/react'
+import { useHub } from '@rune-hub/react'
 
-const count = () => 0
-const log = () => console.log(get(count))
+function MyComponent () {
+  const hub = useHub()
 
-function Counter () {
-  const value = useRune(count)
-  // Subscribe to count changes
-  
-  useRune(log)
-  // Activate log effect
+  console.log(hub)
 
-  return <div>Count: {value}</div>
+  return <h1>Hello World!</h1>
 }
 ```
 
 ### useSlot
-###### [🏠︎](#index) / [API](#api) / useSlot [↑](#userune)
+###### [🏠︎](#index) / [API](#api) / useSlot [↑](#usehub)
 
 **Returns a Slot instance for a given Rune within the current Hub context.**
 
