@@ -130,7 +130,7 @@ Component:
 ```tsx
 import { useState } from 'react'
 import { useRune } from '@rune-hub/react'
-import { todos, addTodo, toggleTodo } from './store.ts'
+import { todos, addTodo, toggleTodo } from './store'
 
 function TodoList () {
   const todoList = useRune(todos)
