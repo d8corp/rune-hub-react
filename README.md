@@ -3,7 +3,9 @@
 <img src="https://cdn.jsdelivr.net/gh/d8corp/rune-hub@main/logo.svg" width="80">
 </a>
 <br>
+<a href="https://github.com/d8corp/rune-hub-react">
 @rune-hub/react
+</a>
 </h1>
 
 <div align="center">
