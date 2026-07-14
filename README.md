@@ -220,6 +220,8 @@ function Counter () {
 ### useOn
 ###### [🏠︎](#index) / [API](#api) / useOn [↑](#userune) [↓](#useaction)
 
+Use `useOn` when you need to run side effects (like logging, analytics, or synchronization) that depend on other Runes, but don't need the return value in your component.
+
 ```tsx
 import { rune, get } from 'rune-hub'
 import { useRune, useOn } from '@rune-hub/react'
