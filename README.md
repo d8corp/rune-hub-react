@@ -76,12 +76,12 @@ npm i rune-hub @rune-hub/react
 A simple counter demonstrating.
 
 ```tsx
-import { set, get } from 'rune-hub'
+import { slot } from 'rune-hub'
 import { useRune } from '@rune-hub/react'
 
 const count = () => 0
-const increment = () => set(count, get(count) + 1)
-const decrement = () => set(count, get(count) - 1)
+const increment = () => slot(count).value++
+const decrement = () => slot(count).value--
 
 function Counter () {
   const value = useRune(count)
