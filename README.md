@@ -3,14 +3,15 @@
 <img src="https://cdn.jsdelivr.net/gh/d8corp/rune-hub@main/logo.svg" width="80">
 </a>
 <br>
-<a href="https://github.com/d8corp/rune-hub-react">
 @rune-hub/react
-</a>
 </h1>
 
 <div align="center">
   <a href="https://www.npmjs.com/package/@rune-hub/react" target="_blank">
     <img src="https://img.shields.io/npm/v/@rune-hub/react.svg" alt="rune-hub npm">
+  </a>
+  <a href="https://github.com/d8corp/rune-hub-react" target="_blank">
+    <img src="https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white" alt="rune-hub source code">
   </a>
   <a href="https://www.npmtrends.com/@rune-hub/react" target="_blank">
     <img src="https://img.shields.io/npm/dm/@rune-hub/react.svg" alt="rune-hub downloads">
